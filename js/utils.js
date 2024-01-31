@@ -12,7 +12,6 @@ var emailVerified = document.getElementById('emailVerified')
 var passwordReset = document.getElementById('passwordReset')
 var userName = document.getElementById('userName')
 var userImg = document.getElementById('userImg')
-
 var todoForm = document.getElementById('todoForm')
 var todoCount = document.getElementById('todoCount')
 var ulTodoList = document.getElementById('ulTodoList')
@@ -51,7 +50,7 @@ function hideItem(element) {
 function showUserContent(user) {
   console.log(user)
   if (user.providerData[0].providerId != 'password') {
-    emailVerified.innerHTML = 'Autenticação por provedor confiável, não é necessário verificar e-mail'
+    emailVerified.innerHTML = 'Não é necessário verificar e-mail'
     hideItem(sendEmailVerificationDiv)
   } else {
     if (user.emailVerified) {
